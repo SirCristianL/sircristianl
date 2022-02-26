@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap');
+@import './variables.css';
+
+@import './components/_navbar.css';
+@import './components/_buttons.css';
+@import './components/_cards.css';
+@import './components/_inputs.css';
+@import './components/_decorators.css';
+
+@import './layout/_grids.css';
+@import './layout/_spacing.css';
+
+@import './texts/_texts.css';
+
+@import './mediaqueries/_mediaquery-xl.css';
+@import './mediaqueries/_mediaquery-lg.css';
+@import './mediaqueries/_mediaquery-md.css';
+@import './mediaqueries/_mediaquery-sm.css';
+
+body {
+    background: var(--color-2);
+}
+* {
+    font-family: 'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 900px;
+    width: 100%;
+}
+
+section:not(#jumbotron) {
+    padding: var(--gap-5) 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.row-v-center {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-1) 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-wh-1);
+    font-size: 0.8rem;
+    font-weight: 500;
+}

@@ -1,2 +1,205 @@
-<h1>Probando el GitPage</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porftolio Web :D</title>
+        <script src="scripts/script.js"></script>
+        <script src="https://kit.fontawesome.com/0676165871.js" crossorigin="anonymous"></script>
+        <link href="./styles/styles.css" rel="stylesheet">
+    </head>
+    <body class="light-mode">
+        <nav>
+            <div class="container">
+                <a href="#">
+                    SirCristian
+                </a>
+                <ul class="nav-list-desktop">
+                    <li>
+                        <a href="#about-me">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#proyects">Proyects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="btn-theme show" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </li>
+                    <li class="btn-theme" onclick="toggleTheme()">
+                        <i class="fas fa-sun"></i>
+                    </li>
+                </ul>
+                <ul class="nav-list-mobile">
+                    <li onclick="toggleNavbar()">
+                        <i class="fas fa-bars"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="jumbotron">
+            <div class="container">
+                <div class="jumbotron-grid">
+                    <div>
+                        <picture class="shape">
+                            <img src="./assets/yo.png" alt="Hola, soy Cristian">
+                        </picture>
+                    </div>
+                    <div>
+                        <h2 class="txt-display-1 color-1">Hi</h2>
+                        <h3 class="txt-display-2 color-wh my-1">I'm Cristian Lucero</h3>
+                        <p class="txt-body-lg-1 color-wh">I'm a fan of CSS and I love working as a 
+                            front-end developer. 
+                            <br>
+                            Do you want to know more? Follow me on social medias
+                            <br>
+                            and scroll down!
+                        </p>
+                        <div class="socialnets-grid mt-3">
+                            <button class="btn btn-icon">
+                                <i class="fab fa-instagram"></i>
+                            </button>
+                            <button class="btn btn-icon">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="btn btn-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                            <button class="btn btn-icon">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about-me">
+            <div class="container">
+                <h2 class="title-section mb-5">About me</h2>
+                <div class="aboutme-grid">
+                    <div>
+                        <p class="txt-body-lg-2 color-wh-1">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem alias 
+                            nisi consequuntur incidunt officiis aliquid tempore, corporis quibusdam a dolor 
+                            adipisci quasi facere. Porro molestiae aliquam sint repudiandae at!
+                        </p>
+                    </div>
+                    <div class="aboutme-items-grid">
+                        <figure class="item">
+                            <img src="assets/angular_logo.png">
+                        </figure>
+                        <figure class="item">
+                            <img src="assets/css_logo.png">
+                        </figure>
+                        <figure class="item">
+                            <img src="assets/html_logo.png">
+                        </figure>
+                        <figure class="item">
+                            <img src="assets/js_logo.png">
+                        </figure>
+                        <figure class="item">
+                            <img src="assets/sass_logo.png">
+                        </figure>
+                        <figure class="item">
+                            <img src="assets/ts_logo.png">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h2 class="title-section mb-5">Projects</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <figure class="card-picture">
+                            <img src="./assets/cheems.jpg">
+                        </figure>
+                        <div class="card-content">
+                            <h3 class="txt-subtitle-1 mt-1 mb-2 color-wh">Título del proyecto</h3>
+                            <p class="txt-body-1 color-wh-1">
+                                Aquí va una interesante descripción del proyecto
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure class="card-picture">
+                            <img src="./assets/cheems.jpg">
+                        </figure>
+                        <div class="card-content">
+                            <h3 class="txt-subtitle-1 mt-1 mb-2 color-wh">Título del proyecto</h3>
+                            <p class="txt-body-1 color-wh-1">
+                                Aquí va una interesante descripción del proyecto
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2 class="title-section mb-5">Contact</h2>
+                <div class="contact-grid">
+                    <div class="card-form">
+                        <form>
+                            <div class="form-box mb-2">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+                            <div class="form-box mb-2">
+                                <label>Asunto</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-box mb-2">
+                                <label>Mensaje</label>
+                                <input type="text">
+                            </div>
+                            <button class="btn block" type="submit">
+                                ¡Enviar!
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <p class="txt-body-lg-1 color-1">You can find me on:</p>
+                        <ul>
+                            <li class="row-v-center my-2">
+                                <button class="btn btn-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <span class="color-1 txt-subtitle-1 ml-1">@sircristianl</span>
+                            </li>
+                            <li class="row-v-center my-2">
+                                <button class="btn btn-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <span class="color-1 txt-subtitle-1 ml-1">@sircristianl</span>
+                            </li>
+                            <li class="row-v-center my-2">
+                                <button class="btn btn-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </button>
+                                <span class="color-1 txt-subtitle-1 ml-1">SirCristianL</span>
+                            </li>
+                            <li class="row-v-center my-2">
+                                <button class="btn btn-icon">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <span class="color-1 txt-subtitle-1 ml-1">SirCristianL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Made with 
+                <i class="fas fa-heart"></i>
+                by SirCristian (Cristian Lucero)
+            </p>
+        </footer>
+    </body>
+</html>
 

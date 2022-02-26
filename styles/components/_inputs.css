@@ -1,0 +1,31 @@
+.form-box label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-wh-1);
+    padding: var(--gap-1) / 2;
+}
+.form-box input {
+    width: 100%;
+    color: var(--color-wh-1);
+    border: 2px solid transparent;
+    outline: none !important;
+    outline-offset: 0px !important;
+    line-height: 1.6rem;
+    padding: calc(var(--gap-1) / 2) var(--gap-1);
+    border-radius: var(--br-1);
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.2s all ease;
+    font-size: 1rem;
+    z-index: 1;
+}
+.form-box:focus-within label {
+    filter: drop-shadow(2px 2px 4px var(--color-1));
+}
+.form-box:focus-within input, .form-box:focus-within textarea {
+    border: 2px solid var(--color-1);
+    box-shadow: 0px 0px 8px 0px rgba(var(--color-1), 0.6);
+}
+.form-box textarea {
+    resize: none;
+}
