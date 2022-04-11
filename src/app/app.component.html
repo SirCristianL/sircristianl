@@ -1,0 +1,37 @@
+<nav> 
+    <div class="container">
+        <div class="logo">
+            <p>SirCristian</p>
+        </div>
+        <ul class="list-nav-1">
+           <li>About Me</li> 
+           <li>Projects</li> 
+           <li>Contact</li> 
+           <li class="btn-theme show" (click)="toggleTheme()">
+                <fa-icon [icon]="faSun"></fa-icon>
+           </li> 
+           <li class="btn-theme" (click)="toggleTheme()">
+                <fa-icon [icon]="faMoon"></fa-icon>
+            </li> 
+        </ul>
+        <ul class="list-nav-2">
+            <li class="btn-theme show" (click)="toggleTheme()">
+                <fa-icon [icon]="faSun"></fa-icon>
+           </li> 
+            <li class="btn-theme btn-theme-dark" (click)="toggleTheme()">
+                <fa-icon [icon]="faMoon"></fa-icon>
+            </li> 
+            <li (click)="toggleMenu()">
+                <fa-icon [icon]="faBars"></fa-icon>
+           </li> 
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <p>Made with                         
+        <fa-icon [icon]="faHeart"></fa-icon>
+        by SirCristian (Cristian Lucero) </p>
+</footer>

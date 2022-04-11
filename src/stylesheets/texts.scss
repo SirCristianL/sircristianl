@@ -1,0 +1,100 @@
+@mixin txt-display-1 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-weight: bolder;
+}
+@mixin txt-display-2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+@mixin txt-body-lg-1 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+@mixin txt-body-lg-2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+@mixin txt-title-0 {
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+@mixin txt-title-1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+@mixin txt-subtitle-1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+@mixin txt-subtitle-2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+@mixin txt-body-1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.txt-display-1 {
+    @include txt-display-1();
+}
+.txt-display-2 {
+    @include txt-display-2();
+}
+
+.txt-body-lg-1 {
+    @include txt-body-lg-1();
+}
+.txt-body-lg-2 {
+    @include txt-body-lg-2();
+}
+
+.txt-title-0 {
+    @include txt-title-0();
+}
+.txt-title-1 {
+    @include txt-title-1();
+}
+
+.txt-subtitle-1 {
+    @include txt-subtitle-1();
+}
+.txt-subtitle-2 {
+    @include txt-subtitle-2();
+}
+
+.txt-body-1 {
+    @include txt-body-1();
+}
+
+.titleSection {
+    @include txt-title-1();
+    color: $aux-2;
+    width: fit-content;
+    background: $color-1;
+    padding: $gap-2 $gap-3 $gap-2 0;
+    position: relative;
+    &::before {
+        content: "";
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        left: -50px;
+        border-radius: 100% 0% 30% 60% / 80% 0% 0% 30%;
+        top: 0;
+        background: $color-1;
+    }
+    &::after {
+        content: "";
+        height: 100%;
+        width: 70px;
+        position: absolute;
+        right: -50px;
+        border-radius: 0% 80% 100% 0%/ 0% 40% 100% 0%;
+        top: 0;
+        background: $color-1;
+        box-shadow: $gap-2 0 0px 0px rgba($color-1, 0.5),
+        $gap-4 0 0px 0px rgba($color-1, 0.5);
+    }
+}

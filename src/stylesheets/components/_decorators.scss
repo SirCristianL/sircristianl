@@ -1,0 +1,76 @@
+/* /\/\/\/\/\/\/\/\ BUBBLE DECORATOR /\/\/\/\/\/\/\/\ */
+
+$bubble-size: 80px;
+
+.bubble {
+    background: radial-gradient(ellipse at center, rgba($color-1,0.05) 0%, rgba($color-1,0.2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $bubble-size;
+    height: $bubble-size;
+    border-radius: 100%;
+    animation: morph-3 8s infinite ease-in-out,
+    floating 2s infinite alternate ease-in-out;
+    img {
+        width: 84%;
+    }
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 8;
+        top: 0;
+        left: 0;
+        background: radial-gradient(ellipse at center, rgba($color-1,0.2) 0%, rgba($color-1,0.8) 100%);
+        animation: morph-3 6s infinite ease-in-out,
+        spin 4s infinite ease-in-out,
+        bg-blur 4s infinite alternate-reverse ease-in-out;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bubblesGrid .bubble:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.6}s;
+    }
+}
+
+
+.form-box {
+    label {
+        @include txt-subtitle-2;
+        display: block;
+        width: fit-content;
+        padding: $gap-1 / 2;
+        color: $color-2;
+        transition: 0.2s all ease;
+    }
+    input, textarea {
+        @include txt-body-1;
+        width: 100%;
+        color: $color-2;
+        border: 2px solid transparent;
+        outline: none !important;
+        outline-offset: 0px !important;
+        line-height: 1.6rem;
+        padding: $gap-1 / 2 $gap-1;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: 0.2s all ease;
+        z-index: 1;
+    }
+    textarea {
+        resize: none;
+    }
+}
+
+.form-box:focus-within {
+    label {
+        filter: drop-shadow(2px 2px 4px $color-1);
+    }
+    input, textarea {
+        border: 2px solid $color-1;
+        box-shadow: 0px 0px 8px 0px rgba($color-1, 0.6);
+    }
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+@import './stylesheets/variables.scss';
+@import './stylesheets/texts.scss';
+@import './stylesheets/components/components.scss';
+@import './stylesheets/globalClasses.scss';
+@import './stylesheets/grids.scss';
+@import './stylesheets/colors.scss';
+@import './stylesheets/animations.scss';
+@import './stylesheets/mediaqueries/media-sm.scss';
+@import './stylesheets/mediaqueries/media-md.scss';
+@import './stylesheets/mediaqueries/media-lg.scss';
+@import './stylesheets/mediaqueries/media-xl.scss';
+@import './stylesheets/mediaqueries/media-xxl.scss';
+
+@import 'swiper/css/bundle';
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+html, body {
+    overflow-x: hidden;
+}
+body {
+    background: $aux-2;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+#jumbotron {
+    background: $aux-1;
+    position: relative;
+    transition: 0.3s all ease;
+    padding: $gap-4 0;
+    min-height: calc(100vh - #{$navbar-height});
+}
+
+#jumbotron::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    //background: $gradient-1-rev;
+    //animation: gradientFade 4s infinite alternate ease;
+}
+
+#about-me, #projects, #contact-me, #skills {
+    position: relative;
+    padding: $gap-6 0;
+    margin: $gap-6 0;
+}
+
+#contact-me {
+    background: $gradient-1;
+    height: 340px;
+}
+
+.container {
+    width: 100%;
+    padding: 0 $gap-2;
+    margin: 0 auto;
+}
+
+.shape {
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        animation: morph-2 8s ease-in-out infinite;
+        filter: grayscale(100%);
+    }
+}
+.shape::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: $gradient-2;
+    border-top: 140px solid $aux-1;
+    animation: morph 8s ease-in-out infinite;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $gap-2 0;
+    font-size: 0.8rem;
+    color: $color-th-a-1;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    background: rgba($color-1, 0.1);
+    p {
+        text-align: center;
+    }
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color-1;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darken($color-1, 10%);
+  }
+
+
+.item-skill {
+    display: flex;
+    place-content: center;
+    img {
+        background: $gradient-1-a-2;
+        padding: $gap-2;
+        border-radius: $br-2;
+        height: 120px;
+        width: auto;
+    }
+}

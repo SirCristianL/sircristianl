@@ -1,0 +1,202 @@
+/* /\/\/\/\/\/\/\/\ MARGINS AND PADDINGS /\/\/\/\/\/\/\/\ */
+
+$gap-0: 1rem;
+$gap-1: $gap-0 * 0.5;
+$gap-2: $gap-0 * 1;
+$gap-3: $gap-0 * 1.5;
+$gap-4: $gap-0 * 2;
+$gap-5: $gap-0 * 3;
+$gap-6: $gap-0 * 4;
+
+
+$list-g: 
+'1' $gap-1, 
+'2' $gap-2, 
+'3' $gap-3, 
+'4' $gap-4, 
+'5' $gap-5,
+'6' $gap-6;
+
+
+/* /\/\/\/\/\/\/\/\ BREAKPOINTS /\/\/\/\/\/\/\/\ */
+
+$bp-xxl: 1441px;
+$bp-xl: 1200px;
+$bp-lg: 992px;
+$bp-md: 768px;
+$bp-sm: 576px;
+$list-bp: 'sm' $bp-sm, 'md' $bp-md, 'lg' $bp-lg, 'xl' $bp-xl, 'xxl' $bp-xxl;
+
+
+/* /\/\/\/\/\/\/\/\ GRADIENTS /\/\/\/\/\/\/\/\ */
+
+$gradient-1: linear-gradient(132.82deg, #4895C0 0%, #4854C0 96.77%);
+$gradient-1-a: linear-gradient(132.82deg, rgba(72, 148, 192, 0.7) 0%, rgba(72, 84, 192, 0.7) 96.77%);
+$gradient-1-a-1: linear-gradient(132.82deg, rgba(72, 148, 192, 0.4) 0%, rgba(72, 84, 192, 0.4) 96.77%);
+$gradient-1-a-2: linear-gradient(132.82deg, rgba(72, 148, 192, 0.15) 0%, rgba(72, 84, 192, 0.15) 96.77%);
+
+$gradient-2: var(--gradient-2);
+$gradient-2-light: linear-gradient(to top,rgba(255,255,255,0.15) 0%, rgba(255,255,255, 0.05) 100%);
+$gradient-2-dark: linear-gradient(to top,rgba(0,0,0,0.15) 0%, rgba(0,0,0, 0.05) 100%);
+
+
+/* /\/\/\/\/\/\/\/\ COLORS /\/\/\/\/\/\/\/\ */
+
+$aux-1: var(--aux-1);
+$aux-2: var(--aux-2);
+
+$color-1: #248bc7;
+$color-2: var(--color-2);
+$color-3: var(--color-3);
+
+$color-th: var(--color-th);
+$color-th-inv: var(--color-th-inv);
+$color-th-a-1: var(--color-th-a-1);
+
+
+
+
+
+$color-dark-0: #000;
+$color-dark-0-a-1: hsla(0, 0%, 0%, 0.8);
+$color-dark-1: #070f1b;
+$color-dark-2: #040911;
+$color-2-dver:#90B2C6;
+$color-3-dver:#1E3253;
+
+$color-light-0: #fff;
+$color-light-0-a-1: rgba(255, 255, 255, 0.8);
+
+$color-light-1: #dfe5f5;
+$color-light-2: #c7cee0;
+$color-2-lver:#3b4952;
+$color-3-lver:#a8b9d6;
+
+body.dark-mode{
+  --aux-1: #{$color-dark-1};
+  --aux-2: #{$color-dark-2};
+  --color-th: #{$color-light-0};
+  --color-th-a-1: #{$color-light-0-a-1};
+  --color-th-inv: #{$color-dark-0};
+  --color-2: #{$color-2-dver};
+  --color-3: #{$color-3-dver};
+  --gradient-2: #{$gradient-2-light};
+}
+
+body {
+  --aux-1: #{$color-light-1};
+  --aux-2: #{$color-light-2};
+  --color-th: #{$color-dark-0};
+  --color-th-a-1: #{$color-dark-0-a-1};
+  --color-th-inv: #{$color-light-0};
+  --color-2: #{$color-2-lver};
+  --color-3: #{$color-3-lver};
+  --gradient-2: #{$gradient-2-dark};
+}
+
+
+
+/* /\/\/\/\/\/\/\/\ BORDER RADIUS /\/\/\/\/\/\/\/\ */
+
+$br-1: 0.5rem;
+$br-2: 1rem;
+
+
+/* ################## GENERADOR DE MARGINS ################## */
+
+@each $m in $list-g {
+    .mt-#{nth($m,1)} {
+      margin-top: #{nth($m,2)};
+    }
+    .mb-#{nth($m,1)} {
+      margin-bottom: #{nth($m,2)};
+    }
+    .ml-#{nth($m,1)} {
+      margin-left: #{nth($m,2)};
+    }
+    .mr-#{nth($m,1)} {
+      margin-right: #{nth($m,2)};
+    }
+    .mx-#{nth($m,1)} {
+      margin-left: #{nth($m,2)};
+      margin-right: #{nth($m,2)};
+    }
+    .my-#{nth($m,1)} {
+      margin-top: #{nth($m,2)};
+      margin-bottom: #{nth($m,2)};
+    }
+    @each $bp in $list-bp {
+      @media (min-width: #{nth($bp,2)}) {
+        .mt-#{nth($bp,1)}-#{nth($m,1)} {
+          margin-top: #{nth($m,2)} !important;
+        }
+        .mb-#{nth($bp,1)}-#{nth($m,1)} {
+          margin-bottom: #{nth($m,2)} !important;
+        }
+        .ml-#{nth($bp,1)}-#{nth($m,1)} {
+          margin-left: #{nth($m,2)} !important;
+        }
+        .mr-#{nth($bp,1)}-#{nth($m,1)} {
+          margin-right: #{nth($m,2)} !important;
+        }
+        .mx-#{nth($bp,1)}-#{nth($m,1)} {
+          margin-left: #{nth($m,2)} !important;
+          margin-right: #{nth($m,2)} !important;
+        }
+        .my-#{nth($bp,1)}-#{nth($m,1)} {
+          margin-top: #{nth($m,2)} !important;
+          margin-bottom: #{nth($m,2)} !important;
+        }
+      }
+    }
+}
+
+
+/* ################## GENERADOR DE PADDINGS ################## */
+
+@each $p in $list-g {
+  .pt-#{nth($p,1)} {
+    padding-top: #{nth($p,2)};
+  }
+  .pb-#{nth($p,1)} {
+    padding-bottom: #{nth($p,2)};
+  }
+  .pl-#{nth($p,1)} {
+    padding-left: #{nth($p,2)};
+  }
+  .pr-#{nth($p,1)} {
+    padding-right: #{nth($p,2)};
+  }
+  .px-#{nth($p,1)} {
+    padding-left: #{nth($p,2)};
+    padding-right: #{nth($p,2)};
+  }
+  .py-#{nth($p,1)} {
+    padding-top: #{nth($p,2)};
+    padding-bottom: #{nth($p,2)};
+  }
+  @each $bp in $list-bp {
+    @media (min-width: #{nth($bp,2)}) {
+      .mt-#{nth($bp,1)}-#{nth($p,1)} {
+        padding-top: #{nth($p,2)} !important;
+      }
+      .mb-#{nth($bp,1)}-#{nth($p,1)} {
+        padding-bottom: #{nth($p,2)} !important;
+      }
+      .ml-#{nth($bp,1)}-#{nth($p,1)} {
+        padding-left: #{nth($p,2)} !important;
+      }
+      .mr-#{nth($bp,1)}-#{nth($p,1)} {
+        padding-right: #{nth($p,2)} !important;
+      }
+      .mx-#{nth($bp,1)}-#{nth($p,1)} {
+        padding-left: #{nth($p,2)} !important;
+        padding-right: #{nth($p,2)} !important;
+      }
+      .my-#{nth($bp,1)}-#{nth($p,1)} {
+        padding-top: #{nth($p,2)} !important;
+        padding-bottom: #{nth($p,2)} !important;
+      }
+    }
+  }
+}

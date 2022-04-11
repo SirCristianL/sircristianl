@@ -1,0 +1,47 @@
+.jumbotronGrid {
+    min-height: calc(100vh - 52px);
+    align-items: center;
+    display: grid;
+    column-gap: $gap-5;
+    row-gap: $gap-3;
+    grid-template-columns: 1fr;
+}
+.socialnetsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 12px;
+}
+.projectsGrid {
+    display: grid;
+    gap: $gap-5;
+    grid-template-columns: repeat(auto-fit, minmax(calc(320px - #{$gap-4}), 1fr));
+}
+.aboutMeGrid {
+    display: grid;
+    column-gap: $gap-5;
+    row-gap: $gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(calc(440px - #{$gap-4}), 1fr));
+    align-items: center;
+}
+.cardsaboutGrid {
+    display: grid;
+    gap: $gap-4;
+    margin-top: -24px;
+    grid-template-columns: repeat(auto-fit, minmax(calc(280px - #{$gap-4}), 1fr)); 
+}
+.bubblesGrid {
+    display: grid;
+    gap: $gap-3;
+    grid-template-columns: repeat(auto-fit, minmax(#{$bubble-size}, 1fr));
+}
+.contactMeGrid {
+    display: grid;
+    gap: $gap-3;
+    grid-template-columns: 1fr;
+    & > div:nth-child(2) {
+        width: fit-content;
+        height: fit-content;
+        justify-self: center;
+        align-self: center;
+    }
+}

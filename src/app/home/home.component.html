@@ -1,0 +1,127 @@
+
+<section id="jumbotron">
+    <div class="container">
+        <div class="jumbotronGrid">
+            <div class="">
+                <picture class="shape">
+                    <img class="w-100" src="../../assets/Yo.png">
+                </picture>
+            </div>
+            <div>
+                <h2 class="txt-display-1 clr-1">Hi!</h2>
+                <h3 class="txt-display-2 clr-th">I'm Cristian Lucero</h3>
+                <p class="txt-body-lg-1 clr-th mt-3">I'm a fan of CSS and I love working as a 
+                    front-end developer. 
+                    <br>
+                    Do you want to know more? Follow me on social medias
+                    <br>
+                    and scroll down!</p>
+                <div class="socialnetsGrid mt-5">
+                    <div class="btn btn-icon">
+                        <fa-icon [icon]="faInstagram"></fa-icon>
+                    </div>
+                    <div class="btn btn-icon">
+                        <fa-icon [icon]="faTwitter"></fa-icon>
+                    </div>
+                    <div class="btn btn-icon">
+                        <fa-icon [icon]="faLinkedin"></fa-icon>
+                    </div>
+                    <div class="btn btn-icon">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-me">
+    <div class="container">
+        <h2 class="py-2 titleSection">About Me</h2>
+        <div class="aboutMeGrid mt-5">
+            <div>
+                <p class="txt-body-lg-1 clr-th-1 mb-2">
+                    I started learning about web developing when I was 15, and since then I never stopping. In my way I worked on many 
+                    projects of websites, most of the time from the front-end side.
+                </p>
+                <p class="txt-body-lg-1 clr-th-1">
+                    In that trip I started to make my own designs and study about UI/UX, so I apply that knowledge always that is needed.
+                    On another hand, on my typical life a like playing videogames and investigate about the crypto world.
+                </p>
+            </div>
+
+
+            <div class="cardsaboutGrid">
+                <div class="cardAbout">
+                    <fa-icon [icon]="faLaptopCode"></fa-icon>
+                    <h3>
+                        Web Development
+                    </h3>
+                    <p>I love creating amazing pages from zero!</p>
+                </div>
+                <div class="cardAbout">
+                    <fa-icon [icon]="faPaintBrush"></fa-icon>
+                    <h3>UI Design</h3>
+                    <p>I also can design mockups of websites or apps</p>
+                </div>
+                <div class="cardAbout">
+                    <fa-icon [icon]="faHeart"></fa-icon>
+                    <h3>Pasion</h3>
+                    <p>Motivation is key for awesome products</p>
+                </div>
+                <div class="cardAbout">
+                    <fa-icon [icon]="faCertificate"></fa-icon>
+                    <h3>Compromise</h3>
+                    <p>And I never forgot my values as person</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-4">
+            <h2 class="py-2 clr-1 txt-title-0">Skills</h2>
+            <div class="skillsGrid mt-5">
+                <div></div>
+                <swiper
+                    [config]="config">
+                        <ng-template swiperSlide *ngFor="let item of itemsSkill"> 
+                            <div class="item-skill">
+                                <img [src]="item.img">
+                            </div>
+                        </ng-template>
+                </swiper>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact-me" class="my-5">
+    <div class="container flex-centered-child h-100">
+        <div class="row-v-center">
+            <p class="clr-wh txt-subtitle-2">Want to chat with me?</p>
+            <button class="btn btn-white mx-3">
+                <span>Contact</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="py-2 titleSection">Projects</h2>
+
+        <div class="projectsGrid mt-5">
+            <div class="cardSpecial" *ngFor="let project of ds.projects"> 
+                <figure class="cardSpecial-picture">
+                    <img [src]="project.imgs[0]"/>
+                </figure>
+                <div class="cardSpecial-content">
+                    <h3 class="txt-subtitle-1 mt-1 mb-2 clr-th">{{project.name}}</h3>
+                    <p class="txt-body-1 clr-2">
+                        {{project.description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+@media (min-width: $bp-sm) {
+    .container {
+        max-width: 500px;
+    }
+
+    @mixin txt-title-1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .txt-title-1 {
+        @include txt-title-1();
+    }
+    .titleSection {
+        @include txt-title-1();
+    }
+}

@@ -1,0 +1,26 @@
+@media (min-width: $bp-md) {
+    .container {
+        max-width: 720px;
+    }
+    .jumbotronGrid {
+        min-height: calc(100vh - #{$navbar-height} - #{$gap-5});
+        align-items: center;
+        display: grid;
+        gap: $gap-5;
+        grid-template-columns: minmax(320px, 45%) minmax(320px, 1fr);
+    }
+    .contactMeGrid {
+        display: grid;
+        gap: $gap-3;
+        grid-template-columns: 1.2fr 2fr;
+    }
+
+    $bubble-size: 100px;
+    .bubble {
+        width: $bubble-size;
+        height: $bubble-size;
+    }
+    .bubblesGrid {
+        grid-template-columns: repeat(auto-fit, minmax(#{$bubble-size}, 1fr));
+    }
+}

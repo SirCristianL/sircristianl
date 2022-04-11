@@ -1,0 +1,55 @@
+@media (min-width: $bp-lg) {
+    .container {
+        max-width: 920px;
+    }
+
+    $bubble-size: 140px;
+    .bubble {
+        width: $bubble-size;
+        height: $bubble-size;
+    }
+    .bubblesGrid {
+        grid-template-columns: repeat(auto-fit, minmax(#{$bubble-size}, 1fr));
+    }
+    .contactMeGrid {
+        display: grid;
+        gap: $gap-3;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    @mixin txt-title-1 {
+        font-size: 3.4rem;
+        font-weight: bold;
+    }
+    .txt-title-1 {
+        @include txt-title-1();
+    }
+    .titleSection {
+        @include txt-title-1();
+    }
+
+    @mixin txt-display-1 {
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        font-weight: bolder;
+    }
+    .txt-display-1 {
+        @include txt-display-1();
+    }
+
+    @mixin txt-display-2 {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .txt-display-2 {
+        @include txt-display-2();
+    }
+
+    @mixin txt-body-lg-1 {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+    .txt-body-lg-1 {
+        @include txt-body-lg-1();
+    }
+}

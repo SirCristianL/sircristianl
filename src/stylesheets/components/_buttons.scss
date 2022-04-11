@@ -1,0 +1,99 @@
+/* /\/\/\/\/\/\/\/\ BOTONES /\/\/\/\/\/\/\/\ */
+
+.btn {
+    border-radius: $br-1;
+    background: $gradient-1;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: $aux-1;
+    text-align: center;
+    border: none;
+    padding: $gap-1 $gap-3;
+    width: fit-content;
+    &::before {
+        content: "";
+        opacity: 0;
+        background: $gradient-1;
+        width: calc(100% + (#{$gap-1} / 2));
+        height: calc(100% + (#{$gap-1} / 2));
+        top: -($gap-1 / 4);
+        left: -($gap-1 / 4);
+        position: absolute;
+        border-radius: $br-1;
+        filter: blur(8px);
+        transition: 0.3s all ease;
+    }
+    &::after {
+        content: "";
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: $br-1;
+        background: rgba(255,255,255,0.1);
+        transition: 0.3s all ease;
+    }
+}
+
+.btn.btn-block {
+    width: 100%;
+}
+.btn.btn-white {
+    background: white;
+    span {
+        background: $gradient-1;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &::before {
+        background: white;
+    }
+}
+
+.btn.btn-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fa-icon {
+        color: $aux-1;
+        font-size: 1.7rem;
+    }
+}
+
+.btn:hover {
+    cursor: pointer;
+    &::before {
+        opacity: 1;
+    }
+}
+
+.btn:active {
+    &::before {
+        opacity: 1;
+        filter: blur(24px);
+    }
+    &::after {
+        opacity: 1;
+    }
+}
+
+nav ul {
+    .btn-theme {
+        transform: scale(0);
+        transition: 0.3s all ease;
+    }
+    .btn-theme.show {
+        transform: scale(1);
+    }
+    .btn-theme:last-child {
+        position: absolute;
+        right: 0;
+    }
+}
+
