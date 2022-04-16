@@ -38,9 +38,28 @@
 }
 .flex-centered-child {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .h-100 {
     height: 100%;
+}
+.mw-md {
+    max-width: 440px;
+}
+.text-center {
+    text-align: center;
+}
+
+.br-1 {
+    border-radius: $gap-1;
+}
+.br-2 {
+    border-radius: $gap-2;
+}
+
+.obj-cover {
+    object-fit: cover;
+    object-position: center;
 }

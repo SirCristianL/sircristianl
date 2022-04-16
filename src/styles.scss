@@ -15,6 +15,8 @@
 
 @import 'swiper/css/bundle';
 
+@import 'swiper/scss';
+@import 'swiper/scss/pagination';
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +30,9 @@
 }
 html, body {
     overflow-x: hidden;
+}
+a {
+    text-decoration: none;
 }
 body {
     background: $aux-2;
@@ -54,14 +59,14 @@ img {
     //animation: gradientFade 4s infinite alternate ease;
 }
 
-#about-me, #projects, #contact-me, #skills {
+.section-spacing {
     position: relative;
     padding: $gap-6 0;
     margin: $gap-6 0;
 }
 
 #contact-me {
-    background: $gradient-1;
+    background: $gradient-3;
     height: 340px;
 }
 
@@ -143,5 +148,48 @@ ul {
         border-radius: $br-2;
         height: 120px;
         width: auto;
+    }
+}
+
+.vector-wave.bottom {
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+}
+.vector-wave.top {
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    transform: rotate(180deg);
+}
+
+.swiper .swiper-button-prev, .swiper-button-next {
+    @include btn-base;
+    height: 40px !important;
+    width: 40px !important;
+    background: $gradient-3;
+    &::after {
+        font-size: 1rem;
+        color: white;
+    }
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    background: $gradient-3;
+    border-radius: $br-1;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 $gap-1 2px $gap-1;
+    .swiper-pagination-bullet {
+        background: white;
+    }
+    .swiper-pagination-bullet-active {
+        background: white;
+    }
+}
+
+.swiper-custom-width {
+    .swiper-slide {
+        width: fit-content;
     }
 }

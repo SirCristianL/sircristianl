@@ -2,18 +2,31 @@
     font-size: 4rem;
     letter-spacing: 0.5rem;
     font-weight: bolder;
+    @media (min-width: $bp-lg) {
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        font-weight: bolder;
+    }
 }
 @mixin txt-display-2 {
     font-size: 2.5rem;
     font-weight: 400;
+    @media (min-width: $bp-lg) {
+        font-size: 4rem;
+        font-weight: 400;
+    }
 }
 @mixin txt-body-lg-1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 300;
+    @media (min-width: $bp-lg) {
+        font-size: 1.45rem;
+        font-weight: 300;
+    }
 }
 @mixin txt-body-lg-2 {
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 @mixin txt-title-0 {
     font-size: 2.6rem;
@@ -22,6 +35,10 @@
 @mixin txt-title-1 {
     font-size: 2rem;
     font-weight: bold;
+    @media (min-width: $bp-lg) {
+        font-size: 3.4rem;
+        font-weight: bold;
+    }
 }
 @mixin txt-subtitle-1 {
     font-size: 1.8rem;
@@ -97,4 +114,14 @@
         box-shadow: $gap-2 0 0px 0px rgba($color-1, 0.5),
         $gap-4 0 0px 0px rgba($color-1, 0.5);
     }
+}
+
+.txt-link {
+    border-bottom: 1px solid transparent;
+    transition: 0.3s all ease-in-out;
+    color: $color-2;
+}
+.txt-link:hover {
+    border-bottom: 1px solid $color-2;
+    color: $color-2;
 }

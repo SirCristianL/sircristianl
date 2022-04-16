@@ -1,12 +1,12 @@
 <nav> 
     <div class="container">
-        <div class="logo">
+        <a routerLink="/" class="logo">
             <p>SirCristian</p>
-        </div>
+        </a>
         <ul class="list-nav-1">
-           <li>About Me</li> 
-           <li>Projects</li> 
-           <li>Contact</li> 
+           <li routerLink="/" fragment="about-me">About Me</li> 
+           <li routerLink="/" fragment="projects">Projects</li> 
+           <li routerLink="/" fragment="contact-me">Contact</li> 
            <li class="btn-theme show" (click)="toggleTheme()">
                 <fa-icon [icon]="faSun"></fa-icon>
            </li> 

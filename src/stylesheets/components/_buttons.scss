@@ -1,6 +1,5 @@
 /* /\/\/\/\/\/\/\/\ BOTONES /\/\/\/\/\/\/\/\ */
-
-.btn {
+@mixin btn-base {
     text-decoration: none;
     border-radius: $br-1;
     background: $gradient-1;
@@ -12,6 +11,9 @@
     border: none;
     padding: $gap-1 $gap-3;
     width: fit-content;
+}
+@mixin btn {
+    @include btn-base;
     &::before {
         content: "";
         opacity: 0;
@@ -38,6 +40,9 @@
         transition: 0.3s all ease;
     }
 }
+.btn {
+    @include btn;
+}
 
 .btn.btn-block {
     width: 100%;
@@ -52,6 +57,20 @@
     }
     &::before {
         background: white;
+    }
+}
+.btn.btn-white.white-2 {
+    span {
+        background: $gradient-3;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+.btn.btn-secondary {
+    background: $gradient-3;
+    &::before {
+        background: $gradient-3;
     }
 }
 

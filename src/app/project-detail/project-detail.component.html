@@ -1,0 +1,60 @@
+<section id="project-detail" [ngStyle]="{ 'background-image': 'url(' + project.imgs[0] + ')'}">
+    <div class="container flex-centered-child h-100 wow fadeInUp">
+        <h2 class="txt-display-1 clr-wh mb-3">
+            {{project.name}}
+        </h2>
+        <p class="txt-body-lg-1 clr-wh mw-md text-center">
+            {{project.description}}
+        </p>
+    </div>
+    <wave-1 class="vector-wave top"></wave-1>
+    <wave-1 class="vector-wave bottom"></wave-1>
+</section>
+<section id="about-me" class="section-spacing">
+    <div class="container">
+        <h2 class="py-2 titleSection wow fadeInUp">Details</h2>
+        <div class="mt-5 mb-3 wow fadeInUp" [ngSwitch]="project.slug">
+            <div *ngSwitchCase="'guiamo'">
+                <p class="txt-body-lg-2 clr-th">
+                    This was a project that I worked as case study for a carreer of UX/UI Design that I was doing in that time. You can see
+                    the published version <a class="txt-link" href="https://www.behance.net/gallery/117282919/GuiaMo-Conectando-talleres-y-clientes"
+                    target="_blank">here</a>, 
+                    and I left you some screenshoots.
+                </p>
+            </div>
+            <div *ngSwitchCase="'vinciu'">
+                <p class="txt-body-lg-2 clr-th">
+                    VinciU is my most ambitous project until the date. Due to my experiences of life, I decided to do something about the education
+                    of new technologies and knowledge on the sector of teenagers. So, with two amazing partners we startes this startup. We want to
+                    help teens to archieve new opportunities for their future and the one for the society. I really hope to see you on 
+                    <a class="txt-link" href="https://vinciu.com" target="_blank">vinciu.com</a>, and that's all for now :)
+                </p>
+            </div>
+            <div *ngSwitchCase="'adstreet'">
+                <p class="txt-body-lg-2 clr-th">
+                    The project consist only on a landing one-page for a service of ads on the street. This was one of my first project where I didn't make
+                    the design from zero, because a designer made the mockups and I just code it. Was really fun but took a few iterations.
+                </p>
+            </div>
+            <div *ngSwitchCase="'bestcard'">
+                <p class="txt-body-lg-2 clr-th">
+                    I worked on a fintech project where I developed the front-end of the mobile application, as well as a landing page for the
+                    presentation. Because I no longer work on that project, is probably that the app and the web will continously changing
+                    of what I did in that moment. Here you can see how looks right <a class="txt-link" href="https://bestcard.com.ar" target="_blank">now</a>.
+                </p>
+            </div>
+            <div *ngSwitchCase="'photostore'">
+                <p class="txt-body-lg-2 clr-th">
+                    Was a prototype project where I developed a web platform for an online store of photographs.
+                </p>
+            </div>
+            <div *ngSwitchDefault>output2</div>
+        </div>
+        <swiper class="swiper-custom-width wow fadeInUp"
+            [config]="config2">
+            <ng-template swiperSlide *ngFor="let img of project.imgs">
+                <img [src]="img" class="br-2 obj-cover" style="max-width: 540px" height="320">
+            </ng-template>
+        </swiper>
+    </div>
+</section>

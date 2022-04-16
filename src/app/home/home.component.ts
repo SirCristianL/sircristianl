@@ -9,6 +9,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { DataService } from '../services/data.service';
 import SwiperCore, { SwiperOptions, Navigation } from 'swiper';
+import * as Aos from 'aos';
 SwiperCore.use([Navigation]);
 
 @Component({
@@ -62,7 +63,7 @@ export class HomeComponent implements OnInit {
   constructor(public ds: DataService) { }
 
   ngOnInit(): void {
-
+    Aos.init();
   }
 
 }

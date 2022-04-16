@@ -3,7 +3,7 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { NgwWowService } from 'ngx-wow';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,6 +15,11 @@ export class AppComponent {
   faSun = faSun;
   faHeart = faHeart;
   faBars = faBars;
+
+  constructor(private wowService: NgwWowService,
+    ) {
+    this.wowService.init();
+  }
 
   toggleTheme() {
     let theme = document.querySelector('body');

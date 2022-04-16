@@ -2,12 +2,12 @@
 <section id="jumbotron">
     <div class="container">
         <div class="jumbotronGrid">
-            <div class="">
+            <div class="wow fadeInLeft">
                 <picture class="shape">
                     <img class="w-100" src="../../assets/Yo.png">
                 </picture>
             </div>
-            <div>
+            <div class="wow fadeInRight">
                 <h2 class="txt-display-1 clr-1">Hi!</h2>
                 <h3 class="txt-display-2 clr-th">I'm Cristian Lucero</h3>
                 <p class="txt-body-lg-1 clr-th mt-3">I'm a fan of CSS and I love working as a 
@@ -35,11 +35,11 @@
     </div>
 </section>
 
-<section id="about-me">
+<section id="about-me" class="section-spacing">
     <div class="container">
-        <h2 class="py-2 titleSection">About Me</h2>
+        <h2 class="py-2 titleSection wow fadeInUp">About Me</h2>
         <div class="aboutMeGrid mt-5">
-            <div>
+            <div class="wow fadeInLeft">
                 <p class="txt-body-lg-1 clr-th-1 mb-2">
                     I started learning about web developing when I was 15, and since then I never stopping. In my way I worked on many 
                     projects of websites, most of the time from the front-end side.
@@ -51,7 +51,7 @@
             </div>
 
 
-            <div class="cardsaboutGrid">
+            <div class="cardsaboutGrid wow fadeInRight">
                 <div class="cardAbout">
                     <fa-icon [icon]="faLaptopCode"></fa-icon>
                     <h3>
@@ -77,7 +77,7 @@
 
             </div>
         </div>
-        <div class="mt-4">
+        <div class="mt-4 wow fadeInUp">
             <h2 class="py-2 clr-1 txt-title-0">Skills</h2>
             <div class="skillsGrid mt-5">
                 <div></div>
@@ -95,23 +95,25 @@
 </section>
 
 
-<section id="contact-me" class="my-5">
+<section id="contact-me" class="my-5 section-spacing wow fadeInUp">
     <div class="container flex-centered-child h-100">
         <div class="row-v-center">
             <p class="clr-wh txt-subtitle-2">Want to chat with me?</p>
-            <a href="mailto:crislprojects@gmail.com?Subject=¡Hola%20Cristian!" target="_blank" class="btn btn-white mx-3">
+            <a href="mailto:crislprojects@gmail.com?Subject=¡Hola%20Cristian!" target="_blank" class="btn btn-white white-2 mx-3">
                 <span>Contact</span>
             </a>
         </div>
     </div>
+    <wave-2 class="vector-wave top"></wave-2>
+    <wave-2 class="vector-wave bottom"></wave-2>
 </section>
 
-<section id="projects">
+<section id="projects" class="section-spacing">
     <div class="container">
-        <h2 class="py-2 titleSection">Projects</h2>
+        <h2 class="py-2 titleSection wow fadeInUp">Projects</h2>
 
         <div class="projectsGrid mt-5">
-            <div class="cardSpecial" *ngFor="let project of ds.projects"> 
+            <div class="cardSpecial wow fadeInUp" *ngFor="let project of ds.projects" routerLink="project/{{project.slug}}"> 
                 <figure class="cardSpecial-picture">
                     <img [src]="project.imgs[0]"/>
                 </figure>
